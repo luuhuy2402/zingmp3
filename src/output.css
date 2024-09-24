@@ -553,24 +553,6 @@ video {
   position: relative;
 }
 
-.left-3 {
-  left: 0.75rem;
-}
-
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-.ml-3 {
-  margin-left: 0.75rem;
-}
-
 .flex {
   display: flex;
 }
@@ -581,6 +563,10 @@ video {
 
 .h-\[70px\] {
   height: 70px;
+}
+
+.w-1\/2 {
+  width: 50%;
 }
 
 .w-\[120px\] {
@@ -599,20 +585,16 @@ video {
   width: 100%;
 }
 
-.w-1\/2 {
-  width: 50%;
-}
-
-.w-3 {
-  width: 0.75rem;
-}
-
 .flex-auto {
   flex: 1 1 auto;
 }
 
 .flex-none {
   flex: none;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
 }
 
 .flex-col {
@@ -681,6 +663,15 @@ video {
   background-color: rgb(251 230 230 / var(--tw-bg-opacity));
 }
 
+.object-contain {
+  object-fit: contain;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -706,11 +697,6 @@ video {
   padding-bottom: 15px;
 }
 
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
 .pl-10 {
   padding-left: 2.5rem;
 }
@@ -723,9 +709,19 @@ video {
   font-weight: 500;
 }
 
+.text-\[\#3f3d3d\] {
+  --tw-text-opacity: 1;
+  color: rgb(63 61 61 / var(--tw-text-opacity));
+}
+
 .text-\[\#5d5962\] {
   --tw-text-opacity: 1;
   color: rgb(93 89 98 / var(--tw-text-opacity));
+}
+
+.text-\[\#7a7979\] {
+  --tw-text-opacity: 1;
+  color: rgb(122 121 121 / var(--tw-text-opacity));
 }
 
 .text-\[\#b72479\] {
@@ -738,46 +734,9 @@ video {
   color: rgb(200 177 179 / var(--tw-text-opacity));
 }
 
-.text-\[\#3f3d3d\] {
-  --tw-text-opacity: 1;
-  color: rgb(63 61 61 / var(--tw-text-opacity));
-}
-
-.text-\[\#7a7979\] {
-  --tw-text-opacity: 1;
-  color: rgb(122 121 121 / var(--tw-text-opacity));
-}
-
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
-
-.placeholder\:px-2::placeholder {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.placeholder\:px-4::placeholder {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.placeholder\:pl-4::placeholder {
-  padding-left: 1rem;
-}
-
-.placeholder\:pl-5::placeholder {
-  padding-left: 1.25rem;
-}
-
-.placeholder\:pl-6::placeholder {
-  padding-left: 1.5rem;
-}
-
-.placeholder\:text-\[\#5d5962\]::placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(93 89 98 / var(--tw-text-opacity));
 }
 
 .placeholder\:text-\[\#7a7979\]::placeholder {
