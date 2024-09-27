@@ -8,7 +8,7 @@ const activeStyle = 'py-2 px-[25px] font-medium flex gap-[12px] items-center tex
 
 export default function SidebarLeft() {
     return (
-        <div className="flex flex-col bg-[#fbe6e6]">
+        <div className="flex flex-col h-full bg-[#fbe6e6]">
             <div className="w-full h-[70px] py-[15px] px-[25px] flex justify-start items-center">
                 <img src={logo} alt="Zing mp3" className="w-[120px] h-10" />
             </div>
