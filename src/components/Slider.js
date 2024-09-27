@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
-import { GiConsoleController } from "react-icons/gi";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { getArrSlider } from "../ultis/fn";
+import * as actions from "../store/actions";
 
 const Slider = () => {
     const { banner } = useSelector((state) => state.app);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         const sliderEls = document.getElementsByClassName("slider-item");
@@ -15,17 +16,17 @@ const Slider = () => {
 
             for (let i = 0; i < sliderEls.length; i++) {
                 //delete classname (css)
-                sliderEls[i].classList.remove(
+                sliderEls[i]?.classList?.remove(
                     "animate-slide-right",
                     "order-last",
                     "z-20"
                 );
-                sliderEls[i].classList.remove(
+                sliderEls[i]?.classList?.remove(
                     "animate-slide-left",
                     "order-first",
                     "z-10"
                 );
-                sliderEls[i].classList.remove(
+                sliderEls[i]?.classList?.remove(
                     "animate-slide-left2",
                     "order-2",
                     "z-10"
@@ -69,21 +70,27 @@ const Slider = () => {
         };
     }, []);
 
+    const handleClickBanner = (item) => {
+        if (item?.type === 1) {
+            dispatch(actions.setCurSongId(item.encodeId));
+        }
+    };
     return (
-       <div className="w-full overflow-hidden px-[50px]">
-         <div className="flex gap-8  pt-8 w-full">
-            {banner?.map((item, index) => (
-                <img
-                    src={item.banner}
-                    key={item.encodeId}
-                    className={` slider-item flex-1 object-contain w-[30%] rounded-lg ${
-                        index <= 2 ? "block" : "hidden"
-                    }`}
-                    alt=""
-                />
-            ))}
+        <div className="w-full overflow-hidden px-[50px]">
+            <div className="flex gap-8  pt-8 w-full">
+                {banner?.map((item, index) => (
+                    <img
+                        src={item.banner}
+                        key={item.encodeId}
+                        onClick={() => handleClickBanner(item)}
+                        className={` slider-item flex-1 object-contain w-[30%] rounded-lg ${
+                            index <= 2 ? "block" : "hidden"
+                        }`}
+                        alt=""
+                    />
+                ))}
+            </div>
         </div>
-       </div>
     );
 };
 

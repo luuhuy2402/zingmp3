@@ -3,6 +3,20 @@ module.exports = {
     content: ["./src/**/*.{html,js}", "./public/index.html"],
     theme: {
         extend: {
+            backgroundColor: {
+                "main-100": "#eedada",
+                "main-200": "#fbe6e6",
+                "main-300": "#f9dbdb",
+                "main-400": "#f9c6c5",
+                "main-500": "#d4baba",
+            },
+            colors: {
+                "main-100": "#eedada",
+                "main-200": "#fbe6e6",
+                "main-300": "#f9dbdb",
+                "main-400": "#f9c6c5",
+                "main-500": "#d4baba",
+            },
             keyframes: {
                 "slide-right": {
                     "0%": {
