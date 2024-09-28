@@ -12,7 +12,7 @@ export default function Public() {
                 <div className="flex-auto border border-red-500">
                     <Outlet />
                 </div>
-                <div className="w-[300px] flex-none border border-green-500">
+                <div className="w-[280px] hidden 1430:flex  flex-none  animate-slide-left">
                     <SidebarRight />
                 </div>
             </div>

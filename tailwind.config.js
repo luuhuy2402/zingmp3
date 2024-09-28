@@ -16,6 +16,7 @@ module.exports = {
                 "main-300": "#f9dbdb",
                 "main-400": "#f9c6c5",
                 "main-500": "#d4baba",
+                "main-600": "#b72479"
             },
             keyframes: {
                 "slide-right": {
@@ -57,6 +58,10 @@ module.exports = {
                 "slide-left2":
                     "slide-left2 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;",
             },
+        },
+        screens: {
+            1600: "1600px",
+            1430: "1142px",
         },
     },
     plugins: [],
